@@ -1,0 +1,45 @@
+Jam pasir
+
+Level: 1
+
+Diberikan sebuah bilangan bulat N (1 <= N <= 10) dan sebuah string PENUH atau KOSONG, buatlah gambar jam pasir
+dengan menggunakan karakter * dan spasi. N menunjukkan tinggi salah satu sisi jam pasir, minus titik tengah.
+Jika string yang diberikan adalah PENUH, maka sisi bawah jam pasir penuh terisi bintang. Jika KOSONG, maka sisi
+atas yang penuh.
+
+Format masukan:
+Baris pertama berisi N sesuai deskripsi di atas.
+Baris kedua berisi string PENUH atau KOSONG.
+
+Format keluaran:
+Lihat contoh.
+
+Contoh masukan 1:
+1
+KOSONG
+Contoh keluaran 1:
+***
+ *
+***
+
+Contoh masukan 2:
+2
+KOSONG
+Contoh keluaran 2:
+*****
+ ***
+  *
+ * *
+*****
+
+Contoh masukan 3:
+3
+PENUH
+Contoh keluaran 3:
+*******
+ *   *
+  * *
+   *
+  ***
+ *****
+*******

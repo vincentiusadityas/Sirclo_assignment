@@ -1,0 +1,46 @@
+Bola berantai
+
+Level: 3
+
+Diberikan susunan awal sebuah barisan bola dan sekumpulan bola dalam kantong, eksekusi perintah2 yang diberikan
+untuk mengubah susunan bola dalam barisan tersebut. Setiap bola diberikan 1 huruf sebagai penanda warna, dari A-Z.
+Perintah dapat berupa SELIP, dengan argumen warna bola yang akan diselipkan, diambil dari kantong, beserta posisi
+dari kiri di mana bola akan diselipkan. Apabila warna tersebut tidak ada di kantong atau posisi melebihi jumlah bola,
+anggap saja perintah tersebut tidak ada. Selain itu, terdapat juga perintah AMBIL, dengan argumen posisi bola dalam
+barisan, yang kemudian dimasukkan ke dalam kantong. Jika posisi melebihi atau sama dengan jumlah bola, anggap saja
+perintah tersebut tidak ada. Posisi adalah indeks basis 0 dihitung dari kiri. Berikan kondisi akhir barisan dan kantong
+setelah semua perintah dijalankan.
+
+Format masukan:
+Baris pertama berisi sususan awal barisan bola, dengan panjang maksimal 100.
+Baris kedua berisi kondisi awal kantong, dengan format:
+<warna>:<jumlah>,<warna>:<jumlah>,...
+yang dapat berupa baris kosong alias kantong pada kondisi awal tidak memiliki bola sama sekali.
+Baris2 berikutnya sampai akhir masukan berisi perintah SELIP atau AMBIL, sesuai deskripsi di atas.
+
+Format keluaran:
+Baris pertama berisi susunan akhir barisan bola
+Baris kedua berisi kondisi akhir kantong, dengan format yang sama pada baris kedua masukan namun terurut berdasarkan warna,
+hanya untuk warna yang jumlahnya > 0
+
+Contoh masukan:
+AABCCCDD
+A:1,E:2,C:2
+SELIP A 0
+SELIP A 0
+AMBIL 3
+SELIP
+SELIP E 8
+SELIP E 8
+AMBIL 10
+Contoh keluaran:
+AAACCCDDEE
+A:1,B:1,C:2
+
+Penjelasan contoh:
+SELIP A 0 mengubah barisan AABCCCDD -> AAABCCCDD dan kantong A:1,E:2,C:2 -> A:0,E:2,C:2
+SELIP A 0 tidak mengubah apa2, karena A sudah habis di kantong
+AMBIL 2   mengubah barisan AAABCCCDD -> AAACCCDD dan kantong A:0,E:2,C:2 -> A:1,E:2,C:2,B:1
+SELIP E 8 mengubah barisan AAACCCDD -> AAACCCDDE dan kantong A:1,E:2,C:2,B:1 -> A:1,E:1,C:2,B:1
+SELIP E 8 mengubah barisan AAACCCDDE -> AAACCCDDEE dan kantong A:1,E:1,C:2,B:1 -> A:1,E:0,C:2,B:1
+AMBIL 10  tidak mengubah apa2, karena jumlah bola hanya 10, sehingga maksimal posisi AMBIL adalah 9

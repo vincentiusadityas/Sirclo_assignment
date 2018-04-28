@@ -1,0 +1,43 @@
+Hanya ada satu jalan
+
+Level: 2
+
+Diberikan peta berukuran M x N, posisi awal dan posisi akhir, berikan urutan arah dari posisi awal sampai posisi akhir.
+Jalan yang bisa dilewati ditandai dengan karakter . (titik) dan yang tidak bisa dengan karakter X. Posisi awal ditandai
+dengan karakter S dan posisi akhir dengan karakter E.
+
+Jaminan:
+- 1 < M,N <= 100
+- Tidak akan ada percabangan di peta, selalu hanya ada dan pasti ada satu jalan dari posisi awal sampai posisi akhir
+
+Format masukan:
+Baris pertama berisi 2 buah bilangan M dan N sesuai deskripsi di atas, dipisahkan dengan sebuah spasi.
+M baris berikutnya berisi masing2 N karakter yang menunjukkan isi peta.
+
+Format keluaran:
+1 buah baris berisi urutan arah yang harus dipilih untuk dapat berpindah dari posisi awal ke posisi akhir, diwakili dengan
+karakter U (atas), D (bawah), L (kiri) dan R (kanan).
+
+Contoh masukan 1:
+2 2
+XS
+XE
+Contoh keluaran 1:
+D
+
+Contoh masukan 2:
+4 4
+S...
+XXX.
+....
+EXXX
+Contoh keluaran 2:
+RRRDDLLLD
+
+Contoh masukan 3:
+3 5
+.....
+.XXX.
+SXXXE
+Contoh keluaran 3:
+UURRRRDD
